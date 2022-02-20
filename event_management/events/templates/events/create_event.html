@@ -1,0 +1,24 @@
+{% extends 'events/main.html' %}
+{% load static %}
+{% block content %}
+<br>
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+
+            <center>
+				<h4>Book an event</h4>
+			<form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+            </center>
+        </div>
+    </div>
+</div>
+
+		<br>
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'events/main.html' %}
+{% load static %}
+{% block content %}
+
+<br><center>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-body"><br><br><br>
+
+            <form method="POST">
+        <!-- Security token by Django -->
+        {% csrf_token %}
+
+        <!-- form as paragraph -->
+        {{ form.as_p }}
+
+        <input type="submit" value="Update">
+    </form><br><br><br><br><br><br><br><br><br>
+        </div>
+    </div>
+</div>
+</center>
+
+{% endblock %}
